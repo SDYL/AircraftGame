@@ -21,6 +21,7 @@ from game_hud import *
 5.游戏静音功能
 '''
 
+
 class Game(object):
     """ 游戏类 """
     def __init__(self):
