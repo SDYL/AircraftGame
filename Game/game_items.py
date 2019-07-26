@@ -80,7 +80,13 @@ class StatusButton(GameSprite):
         """切换状态
         :param is_pause: 是否暂停
         """
-        self.image = self.images[0 if is_pause else 1]
+        if is_pause == True:
+            self.images = 0
+        else:
+            self.images = 1
+
+
+        # self.image = self.images[0 if is_pause else 1]
 
 
 class Label(pygame.sprite.Sprite):

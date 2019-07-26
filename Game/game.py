@@ -205,10 +205,10 @@ class Game(object):
                 self.hud_panel.save_best_score()
                 return
             # 判断游戏状态
-            if self.is_game_over:
+            if self.is_game_over == 1:
                 self.hud_panel.panel_pause(True, self.all_group)
                 # print("游戏已经结束，按空格键重新开始...")
-            elif self.is_pause:
+            elif self.is_pause == 1:
                 self.hud_panel.panel_pause(False, self.all_group)
                 # print("游戏已经暂停，按空格键继续...")
             else:

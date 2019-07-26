@@ -148,7 +148,6 @@ class HUDPanel(object):
         if display_group.has(self.status_label,
                              self.tip_label,
                              self.best_label):
-
             return
 
         # 根据是否结束游戏决定要显示的文字
