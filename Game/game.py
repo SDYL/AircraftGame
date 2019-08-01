@@ -259,7 +259,7 @@ class Game(object):
             for i in range(12):
                 Enemy(0, 3,*groups)
 
-        elif self.hud_panel.level == 2 and count==16:       # 关卡 2
+        elif self.hud_panel.level == 2 and count == 16:       # 关卡 2
             # 1>增加敌机的最大速度
             for enemy in self.enemies_group.sprites():
                 enemy.max_speed = 5
@@ -270,7 +270,7 @@ class Game(object):
             for i in range(2):
                 Enemy(1, 1, *groups)
 
-        elif self.hud_panel.level == 3 and count ==26:      # 关卡 3
+        elif self.hud_panel.level == 3 and count == 26:      # 关卡 3
             # 1> 增加敌机的最大速度
             for enemy in self.enemies_group.sprites():
                 enemy.max_speed = 7 if enemy.kind == 0 else 3
@@ -359,6 +359,7 @@ class Game(object):
         Supply(1, self.supplies_group, self.all_group)
         # 设置 30s 投放道具定时器事件（测试用10s）
         pygame.time.set_timer(THROW_SUPPLY_EVENT, 30000)
+
 
 if __name__ == '__main__':
     pygame.init()

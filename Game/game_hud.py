@@ -19,7 +19,6 @@ class HUDPanel(object):
         :param display_group:面板中的精灵要被添加到的显示精灵组
         """
 
-
         # 1.游戏属性
         self.score = 0              # 游戏的分
         self.lives_count = 3        # 生命计数
@@ -123,7 +122,7 @@ class HUDPanel(object):
 
     def save_best_score(self):
         """将最好的成绩写入 record.text"""
-        file = open(self.record_filename,"w")
+        file = open(self.record_filename, "w")
         file.write("%d" % self.best_score)
         file.close()
 
@@ -151,9 +150,9 @@ class HUDPanel(object):
             return
 
         # 根据是否结束游戏决定要显示的文字
-        text = "Game Over!" if is_game_over else  "Game Paused!"
+        text = "Game Over!" if is_game_over else "Game Paused!"
         tip = "Press spaceber to "
-        tip += "play again." if is_game_over else  "continue."
+        tip += "play again." if is_game_over else "continue."
 
         # 设置标签文字
         self.best_label.set_text("Best: %d" % self.best_score)
@@ -169,11 +168,10 @@ class HUDPanel(object):
                                       best_rect.y + 8 * self.margin)
 
         # 添加到精灵组
-        display_group.add(self.best_label,self.status_label,self.tip_label)
+        display_group.add(self.best_label, self.status_label, self.tip_label)
 
         # 切换状态精灵状态
         self.status_sprite.switch_status(False)
-
 
     def panel_resume(self, display_group):
         """面板恢复

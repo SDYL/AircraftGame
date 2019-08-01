@@ -5,6 +5,7 @@ import pygame
 class MusicPlayer(object):
     """音乐播放器类"""
     res_path = "../Game/sound/"
+
     def __init__(self, music_file):
         """初始化 方法
         :param music_file: 背景音乐文件名
@@ -31,6 +32,7 @@ class MusicPlayer(object):
     @staticmethod
     def play_music():
         pygame.mixer.music.play(-1)
+
     @staticmethod
     def pause_music(is_pause):
         if is_pause:
